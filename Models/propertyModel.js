@@ -39,7 +39,7 @@ const Rentifyproperty = mongoose.model("rentifyproperty", {
     required: true,
   },
   price: {
-    type: Number,
+    type: String,
     required: true,
   },
   likes: {

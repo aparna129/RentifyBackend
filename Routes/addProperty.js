@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const User = require("../Models/userModel");
 const Property = require("../Models/propertyModel");
 const cors = require("cors");
-const { isLoggedIn } = require("../Middleware/LoggedInOrNot");
 
 const router = express.Router();
 
