@@ -19,23 +19,23 @@ const Rentifyproperty = mongoose.model("rentifyproperty", {
     required: true,
   },
   noOfBedrooms: {
-    type: Number,
+    type: String,
     required: true,
   },
   noOfBathrooms: {
-    type: Number,
+    type: String,
     required: true,
   },
   noOfBalconies: {
-    type: Number,
+    type: String,
     required: true,
   },
   noOfHospitalsNearby: {
-    type: Number,
+    type: String,
     required: true,
   },
   squareFootage: {
-    type: Number,
+    type: String,
     required: true,
   },
   price: {
