@@ -9,16 +9,11 @@ router.use(express.json());
 
 router.post("/", async (req, res) => {
   try {
-    const { state, city, price } = req.body;
+    const { state, city } = req.body;
 
     const filter = {};
     if (state) filter.state = state;
     if (city) filter.city = city;
-    if (price) {
-      const [minPrice, maxPrice] = price.split("-");
-      filter.price = { $gte: minPrice };
-      if (maxPrice) filter.price.$lte = maxPrice;
-    }
 
     const properties = await Property.find(filter);
     res.json({ properties: properties });
